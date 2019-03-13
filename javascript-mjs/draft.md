@@ -68,11 +68,13 @@ This document proposes updates to the ECMAScript media types, superseding the ex
 
 --- note_Note_to_Readers
 
-The issues list for this draft can be found at <https://github.com/bmeck/I-D/labels/javascript-mjs>.
+\[\[ To be removed by RFC Editor ]]
 
-The most recent (often, unpublished) draft is at <https://github.com/bmeck/I-D/tree/master/javascript-mjs>.
+The issues list for this draft can be found at <https://github.com/linuxwolf/bmeck-ids/labels/javascript-mjs>.
 
-Recent changes are listed at <https://github.com/bmeck/I-D/commits/master/javascript-mjs>.
+The most recent (often, unpublished) draft is at <https://github.com/linuxwolf/bmeck-ids/tree/master/javascript-mjs>.
+
+Recent changes are listed at <https://github.com/linuxwolf/bmeck-ids/commits/master/javascript-mjs>.
 
 --- middle
 
