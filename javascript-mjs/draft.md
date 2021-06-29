@@ -109,7 +109,7 @@ informative:
 
 --- abstract
 
-This document describes the registration of media types for the ECMAScript and JavaScript programming languages and conformance requirements for implementations of these types. This document obsoletes RFC4329, "Scripting Media Types", replacing the previous registrations for "application/javascript" and "text/javascript" with information and requirements aligned with implementation experiences.
+This document describes the registration of media types for the ECMAScript and JavaScript programming languages and conformance requirements for implementations of these types. This document obsoletes RFC4329, "Scripting Media Types", replacing the previous registrations for "text/javascript" and "application/javascript" with information and requirements aligned with implementation experiences.
 
 --- middle
 
