@@ -145,13 +145,13 @@ This document does not define how fragment identifiers in resource identifiers (
 
 # Encoding
 
-Refer to {{RFC6265}} for a discussion of terminology used in this section.  Source text (as defined in {{ECMA-262}}, section "Source Text") can be binary source text.  Binary source text is a textual data object that represents source text encoded using a character encoding scheme.  A textual data object is a whole text protocol message or a whole text document, or a part of it, that is treated separately for purposes of external storage and retrieval.  An implementation's internal representation of source text and source text are not considered binary source text.
+Refer to {{RFC6265}} for a discussion of terminology used in this section.  Source text (as defined in {{ECMA-262}}, section "Source Text") can be binary source text.  Binary source text is a textual data object that represents source text encoded using a character encoding scheme.  A textual data object is a whole text protocol message or a whole text document, or a part of it, that is treated separately for purposes of external storage and retrieval.  An implementation's internal representation of source text is not considered binary source text.
 
 Implementations need to determine a character encoding scheme in order to decode binary source text to source text.  The media types defined in this document allow an optional charset parameter to explicitly specify the character encoding scheme used to encode the source text.
 
 How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
 
-Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.
+Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8; all other encodings fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.
 
 ## Charset Parameter
 
