@@ -138,9 +138,9 @@ The definitions in this document reflect the current state of implementation acr
 
 In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script.  The Script goal represents the original structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.  See the section "ECMAScript Language: Scripts and Modules" of {{ECMA-262}} for details.
 
-This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
+This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript source text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
-It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments MUST use out of band information in order to determine what goal should be used. To this end some scripting environments have chosen to adopt the new file extension of .mjs for this purpose.
+It is not possible to fully determine if a source text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments MUST use out of band information in order to determine what goal should be used. To this end some scripting environments have chosen to adopt the new file extension of .mjs for this purpose.
 
 This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
 
