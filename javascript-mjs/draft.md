@@ -140,7 +140,7 @@ In order to formalize support for modular programs, {{ECMA-262}} (starting with 
 
 This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
-It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments MUST use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt the new file extension of .mjs for this purpose.
+It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments MUST use out of band information in order to determine what goal should be used. To this end some scripting environments have chosen to adopt the new file extension of .mjs for this purpose.
 
 This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
 
@@ -164,7 +164,7 @@ The charset parameter is only used when processing a Script goal source; Module 
 
 It is possible that implementations cannot interoperably determine a single character encoding scheme simply by complying with all requirements of the applicable specifications.  To foster interoperability in such cases, the following algorithm is defined.  Implementations apply this algorithm until a single character encoding scheme is determined.
 
-1. If the binary source text is not already determined to be a Module goal and starts with a Unicode encoding form signature, the signature determines the encoding.  The following octet sequences, at the very beginning of the binary source text, are considered with their corresponding character encoding schemes:
+1. If the binary source text is not already determined to be using a Module goal and starts with a Unicode encoding form signature, the signature determines the encoding.  The following octet sequences, at the very beginning of the binary source text, are considered with their corresponding character encoding schemes:
 
         +------------------+----------+
         | Leading sequence | Encoding |
@@ -230,7 +230,7 @@ Implementations can fail to implement a specific security model or other means t
 
 The media type registrations herein are divided into two major categories: the sole media type "text/javascript" which is now in common usage, and all of the media types that are obsolete.
 
-For both categories, the ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification uses "text/javascript" as the default media type of ECMAScript when preparing script tags; therefore, "text/javascript" intended usage is to be moved from OBSOLETE to COMMON.
+For both categories, the ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that contents should be parsed using the Module goal. Finally, the {{HTML}} specification uses "text/javascript" as the default media type of ECMAScript when preparing script tags; therefore, "text/javascript" intended usage is to be moved from OBSOLETE to COMMON.
 
 These changes are to be reflected in the IANA Media Types registry in accordance with {{RFC6838}}. The outdated note stating that the "text/javascript" media type has been "OBSOLETED in favor of application/javascript" is to be removed, listing this document as the reference.
 
